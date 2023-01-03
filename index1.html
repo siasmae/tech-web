@@ -1,0 +1,49 @@
+<HTML>
+<head>
+    <style>
+        body{ text-align: center;
+            background-color: pink;
+        }
+        div{ text-align: center; font-size: 2.1cm;
+        }
+        #inputValueID{font-size: 2.1cm;
+        }
+
+        }
+    </style>
+<script language="JavaScript">
+function calculate() {
+    //var inputValue = prompt("Plese enter number for factorial: ");
+    var inputValue = document.getElementById('factorialTxtId').value;
+    var checkValue = isNaN(inputValue);
+    
+    if (!checkValue) {
+        document.getElementById('inputValueID').innerHTML = inputValue;
+        var final = 1;
+        
+        while(inputValue >= 1) {
+            final = final * inputValue;
+            inputValue--;
+        }
+        
+        document.getElementById('checkValue').innerHTML = final;
+    }
+    }
+
+
+</script>
+</head>
+
+<Form name="form">
+<center>
+<div>
+  <input type="text" class="text_input" id="factorialTxtId"/> <input type="button" value="Calculate"  id="factorialButtonId" onclick="calculate()"/>
+  <div>
+  Factorial of <span id="inputValueID"></span> is: <div id="checkValue"></div>
+  </div>
+</div>
+
+</center>
+</form>
+
+</html>

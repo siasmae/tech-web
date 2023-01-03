@@ -1,0 +1,148 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script src="sylvester.src.js"></script>
+<script type="text/javascript" src="matrices.js"></script>
+</head>
+<body>
+<form name="matrixCalc" action="">
+<div id="matrix-a">
+    <p>Matrix A</p>
+    <input type="text" name="AR1C1" size="4" />
+    <input type="text" name="AR1C2" size="4" />
+    <input type="text" name="AR1C3" size="4" />
+    <input type="text" name="AR1C4" size="4" />
+    <input type="text" name="AR1C5" size="4" />
+    <input type="text" name="AR1C6" size="4" />
+    <br/>                                 
+    <input type="text" name="AR2C1" size="4" />
+    <input type="text" name="AR2C2" size="4" />
+    <input type="text" name="AR2C3" size="4" />
+    <input type="text" name="AR2C4" size="4" />
+    <input type="text" name="AR2C5" size="4" />
+    <input type="text" name="AR2C6" size="4" />
+    <br/>                                 
+    <input type="text" name="AR3C1" size="4" />
+    <input type="text" name="AR3C2" size="4" />
+    <input type="text" name="AR3C3" size="4" />
+    <input type="text" name="AR3C4" size="4" />
+    <input type="text" name="AR3C5" size="4" />
+    <input type="text" name="AR3C6" size="4" />
+    <br/>                                 
+    <input type="text" name="AR4C1" size="4" />
+    <input type="text" name="AR4C2" size="4" />
+    <input type="text" name="AR4C3" size="4" />
+    <input type="text" name="AR4C4" size="4" />
+    <input type="text" name="AR4C5" size="4" />
+    <input type="text" name="AR4C6" size="4" />
+    <br/>                                 
+    <input type="text" name="AR5C1" size="4" />
+    <input type="text" name="AR5C2" size="4" />
+    <input type="text" name="AR5C3" size="4" />
+    <input type="text" name="AR5C4" size="4" />
+    <input type="text" name="AR5C5" size="4" />
+    <input type="text" name="AR5C6" size="4" />
+    <br/>                                 
+    <input type="text" name="AR6C1" size="4" />
+    <input type="text" name="AR6C2" size="4" />
+    <input type="text" name="AR6C3" size="4" />
+    <input type="text" name="AR6C4" size="4" />
+    <input type="text" name="AR6C5" size="4" />
+    <input type="text" name="AR6C6" size="4" />
+</div>
+<div id="matrix-b">
+    <p>Matrix B</p>                       
+    <input type="text" name="BR1C1" size="4" />
+    <input type="text" name="BR1C2" size="4" />
+    <input type="text" name="BR1C3" size="4" />
+    <input type="text" name="BR1C4" size="4" />
+    <input type="text" name="BR1C5" size="4" />
+    <input type="text" name="BR1C6" size="4" />
+    <br/>                             
+    <input type="text" name="BR2C1" size="4" />
+    <input type="text" name="BR2C2" size="4" />
+    <input type="text" name="BR2C3" size="4" />
+    <input type="text" name="BR2C4" size="4" />
+    <input type="text" name="BR2C5" size="4" />
+    <input type="text" name="BR2C6" size="4" />
+    <br/>                             
+    <input type="text" name="BR3C1" size="4" />
+    <input type="text" name="BR3C2" size="4" />
+    <input type="text" name="BR3C3" size="4" />
+    <input type="text" name="BR3C4" size="4" />
+    <input type="text" name="BR3C5" size="4" />
+    <input type="text" name="BR3C6" size="4" />
+    <br/>                                
+    <input type="text" name="BR4C1" size="4" />
+    <input type="text" name="BR4C2" size="4" />
+    <input type="text" name="BR4C3" size="4" />
+    <input type="text" name="BR4C4" size="4" />
+    <input type="text" name="BR4C5" size="4" />
+    <input type="text" name="BR4C6" size="4" />
+    <br/>                                
+    <input type="text" name="BR5C1" size="4" />
+    <input type="text" name="BR5C2" size="4" />
+    <input type="text" name="BR5C3" size="4" />
+    <input type="text" name="BR5C4" size="4" />
+    <input type="text" name="BR5C5" size="4" />
+    <input type="text" name="BR5C6" size="4" />
+    <br/>                                
+    <input type="text" name="BR6C1" size="4" />
+    <input type="text" name="BR6C2" size="4" />
+    <input type="text" name="BR6C3" size="4" />
+    <input type="text" name="BR6C4" size="4" />
+    <input type="text" name="BR6C5" size="4" />
+    <input type="text" name="BR6C6" size="4" />
+    <br/>
+</div>
+<div id="buttons">
+    <input type="button" id="mbutton" value="x" />
+    <input type="button" id="addbutton" value="+" />
+    <input type="button" id="subtbutton" value="-" />
+</div>
+<div id="matrix-c">
+    <p>Answer</p>
+    <input type="text" name="PR1C1" size="4" />
+    <input type="text" name="PR1C2" size="4" />
+    <input type="text" name="PR1C3" size="4" />
+    <input type="text" name="PR1C4" size="4" />
+    <input type="text" name="PR1C5" size="4" />
+    <input type="text" name="PR1C6" size="4" />
+    <br/>                                
+    <input type="text" name="PR2C1" size="4" />
+    <input type="text" name="PR2C2" size="4" />
+    <input type="text" name="PR2C3" size="4" />
+    <input type="text" name="PR2C4" size="4" />
+    <input type="text" name="PR2C5" size="4" />
+    <input type="text" name="PR2C6" size="4" />
+    <br/>                                
+    <input type="text" name="PR3C1" size="4" />
+    <input type="text" name="PR3C2" size="4" />
+    <input type="text" name="PR3C3" size="4" />
+    <input type="text" name="PR3C4" size="4" />
+    <input type="text" name="PR3C5" size="4" />
+    <input type="text" name="PR3C6" size="4" />
+    <br/>                               
+    <input type="text" name="PR4C1" size="4" />
+    <input type="text" name="PR4C2" size="4" />
+    <input type="text" name="PR4C3" size="4" />
+    <input type="text" name="PR4C4" size="4" />
+    <input type="text" name="PR4C5" size="4" />
+    <input type="text" name="PR4C6" size="4" />
+    <br/>                                
+    <input type="text" name="PR5C1" size="4" />
+    <input type="text" name="PR5C2" size="4" />
+    <input type="text" name="PR5C3" size="4" />
+    <input type="text" name="PR5C4" size="4" />
+    <input type="text" name="PR5C5" size="4" />
+    <input type="text" name="PR5C6" size="4" />
+    <br/>                                 
+    <input type="text" name="PR6C1" size="4" />
+    <input type="text" name="PR6C2" size="4" />
+    <input type="text" name="PR6C3" size="4" />
+    <input type="text" name="PR6C4" size="4" />
+    <input type="text" name="PR6C5" size="4" />
+    <input type="text" name="PR6C6" size="4" />
+</div>
+</body>
+</html> 

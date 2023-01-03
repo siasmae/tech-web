@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head> <style>
+	body{ background-color: pink;}
+	div {
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+<script language="javascript">
+function Resoudre(){
+var a=document.getElementById('C1').value;
+var b=document.getElementById('C2').value;
+var c=document.getElementById('C3').value;
+var Delta=b*b-4*a*c;
+if(a!=0){
+	if(Delta>0){
+	x1=(-b-Math.sqrt(Delta))/(2*a);
+	x2=(-b+Math.sqrt(Delta))/(2*a);
+	Sol="Deux solutions : "+x1+" et "+x2;}
+	else{
+		if(Delta==0){Sol="Solution double :"+(-b/(2*a));}
+		else {Sol="Pas de Solutions réelles";}
+	}
+
+	}
+else{if(b!=0){Sol='solution unique : '+(-c/b);}
+	else{Sol='pas de solution ou infinité de sol';}
+	}
+document.getElementById('abc').innerHTML=Sol;
+}
+</script>
+<div class="abc">
+<h2> Résolveur d'équations de 2<sup>eme</sup> degré </h2>  
+<form>
+<input type="text" size="4" id="C1">X<sup>2</sup>+
+<input type="text" size="4" id="C2">X+
+<input type="text" size="4" id="C3">=0 <br> <br>
+<input type="button" value="Résoudre" onClick="Resoudre()"><br>
+<p id="abc"> ici s'afficheront les solutions </p>
+</form>
+<div>
+</body>
+</html>
